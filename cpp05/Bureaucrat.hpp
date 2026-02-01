@@ -1,18 +1,27 @@
+#ifndef BUREAUCRAT_HPP
+#define BUREAUCRAT_HPP
+
 #include <string>
 #include <iostream>
+#include <stdexcept>
+#include <ostream>
 
-class bureaucrat{
+
+class Bureaucrat{
     private :
         const std::string name;
         int               grade;
     public :
-        bureaucrat();
-        bureaucrat(std::string name, int grade);
-        bureaucrat(std::string name);
-        bureaucrat(int grade);
-        ~bureaucrat();
+        Bureaucrat(std::string name, int grade);
+        Bureaucrat(Bureaucrat const &other);
+        ~Bureaucrat();
+        Bureaucrat& operator=(const Bureaucrat& other);
         std::string GetName(void) const;
-        void SetName(std::string _name);
-        void GradeTooHighException();
-        void GradeTooLowException();
-};  
+        int GetGrade(void) const;
+        const char *GradeTooHighException();
+        const char *GradeTooLowException();
+};
+
+std::ostream &operator<<(std::ostream &out, const Bureaucrat &b);
+
+#endif
