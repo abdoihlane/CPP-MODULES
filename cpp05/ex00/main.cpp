@@ -3,11 +3,9 @@ int main()
 {
     try
     {
-        Bureaucrat b1("Alice", 2);
+        Bureaucrat b1("CROCO", 2);
         std::cout << b1 << std::endl;
-
-        // Bureaucrat b2("Bob", 151); 
-        // std::cout << b2 << std::endl;
+        // b1.GetGrade();
     }
     catch (const std::exception &e)
     {
@@ -16,7 +14,7 @@ int main()
 
     try
     {
-        Bureaucrat b3("Charlie", 0);
+        Bureaucrat b3("DEER", 159);
         std::cout << b3 << std::endl;
     }
     catch (const std::exception &e)

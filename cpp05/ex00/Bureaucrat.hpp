@@ -18,10 +18,20 @@ class Bureaucrat{
         Bureaucrat& operator=(const Bureaucrat& other);
         std::string GetName(void) const;
         int GetGrade(void) const;
-        const char *GradeTooHighException();
-        const char *GradeTooLowException();
+
+    class GradeTooHighException : public std::exception {
+	    public:
+		    virtual const char* what() const throw();
+	};
+
+    class GradeTooLowException : public std::exception {
+    	public:
+	    	virtual const char* what() const throw();
+	};
+
 };
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &b);
 
 #endif
+

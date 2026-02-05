@@ -33,12 +33,14 @@ int Bureaucrat::GetGrade(void) const {
     return grade;
 }
 
-const char *Bureaucrat::GradeTooHighException() {
-    return "Grade is too hight! Must be between 1 and 150.";    
+const char* Bureaucrat::GradeTooHighException::what() const throw()
+{
+    return "Grade too high";
 }
 
-const char *Bureaucrat::GradeTooLowException() {
-    return "Grade is too low! Must be between 1 and 150.";
+const char* Bureaucrat::GradeTooLowException::what() const throw()
+{
+    return "Grade too low";
 }
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &b)
