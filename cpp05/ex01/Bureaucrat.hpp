@@ -5,7 +5,7 @@
 #include <iostream>
 #include <stdexcept>
 #include <ostream>
-
+#include "Form.hpp"
 
 class Bureaucrat{
     private :
@@ -18,7 +18,9 @@ class Bureaucrat{
         Bureaucrat& operator=(const Bureaucrat& other);
         std::string GetName(void) const;
         int GetGrade(void) const;
-
+        void incrementGrade(void);
+        void decrementGrade(void);
+        void signForm(Form &f);
     class GradeTooHighException : public std::exception {
 	    public:
 		    virtual const char* what() const throw();

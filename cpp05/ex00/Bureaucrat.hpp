@@ -18,7 +18,8 @@ class Bureaucrat{
         Bureaucrat& operator=(const Bureaucrat& other);
         std::string GetName(void) const;
         int GetGrade(void) const;
-
+        void incrementGrade(void);
+        void decrementGrade(void);
     class GradeTooHighException : public std::exception {
 	    public:
 		    virtual const char* what() const throw();

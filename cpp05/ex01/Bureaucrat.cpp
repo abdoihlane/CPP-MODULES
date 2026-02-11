@@ -48,3 +48,26 @@ std::ostream &operator<<(std::ostream &out, const Bureaucrat &b)
     out << b.GetName() << ", Bureaucrat grade " << b.GetGrade() << ".";
     return out;
 }
+
+void Bureaucrat::incrementGrade(void) {
+    if (grade - 1 < 1) 
+        throw GradeTooHighException();
+    else 
+        grade--;
+}
+
+void Bureaucrat::decrementGrade(void) {
+    if (grade + 1 > 150) 
+        throw GradeTooLowException();
+    else 
+        grade++;
+}
+
+void Bureaucrat::signForm(Form &f) {
+    try {
+        f.beSigned(*this);
+        std::cout << name << " signed " << f.GetName() << std::endl;
+    } catch (std::exception &e) {
+        std::cout << name << " couldn't sign " << f.GetName() << " because " << e.what() << std::endl;
+    }
+}
