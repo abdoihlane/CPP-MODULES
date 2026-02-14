@@ -6,7 +6,7 @@
 #include <stdexcept>
 #include <ostream>
 #include "Form.hpp"
-
+class Form;
 class Bureaucrat{
     private :
         const std::string name;

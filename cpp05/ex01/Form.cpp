@@ -1,4 +1,5 @@
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
 
 Form& Form::operator=(const Form& other){
     if(this != &other){

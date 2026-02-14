@@ -14,7 +14,7 @@ int main()
 
     try
     {
-        Bureaucrat b3("DEER", 150);
+        Bureaucrat b3("DEER", 1);
         std::cout << b3 << std::endl;
     }
     catch (const std::exception &e)
