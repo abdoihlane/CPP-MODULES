@@ -21,6 +21,7 @@ public:
     int GetGradeToSign(void) const;
     int GetGradeToExecute(void) const;
     void beSigned(const Bureaucrat &b);
+    virtual void execute(Bureaucrat const & executor) const = 0;
     class GradeTooHighException : public std::exception
     {
         public:

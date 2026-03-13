@@ -7,6 +7,9 @@
 #include <ostream>
 #include "AForm.hpp"
 class AForm;
+class PrisidentialPardonForm;
+class RobotomyRequestForm;
+class ShrubberyCreationForm;
 class Bureaucrat{
     private :
         const std::string name;

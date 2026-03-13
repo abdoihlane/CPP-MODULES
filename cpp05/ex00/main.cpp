@@ -5,7 +5,7 @@ int main()
     {
         Bureaucrat b1("CROCO", 2);
         std::cout << b1 << std::endl;
-        // b1.GetGrade();
+        b1.GetGrade();
     }
     catch (const std::exception &e)
     {
@@ -14,8 +14,11 @@ int main()
 
     try
     {
-        Bureaucrat b3("DEER", 159);
+        Bureaucrat b3("DEER", 1);
         std::cout << b3 << std::endl;
+        b3.incrementGrade();
+        std::cout << b3 << std::endl;
+
     }
     catch (const std::exception &e)
     {
