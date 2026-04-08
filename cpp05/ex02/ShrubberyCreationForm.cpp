@@ -42,22 +42,12 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
     
     if (!file.is_open())
         throw AForm::GradeTooLowException();
-    
-    file << "                                    " << std::endl;
-    file << "                                 ^ " << std::endl;
-    file << "                                /|\\ " << std::endl;
-    file << "                               / | \\ " << std::endl;
-    file << "                              /  |  \\ " << std::endl;
-    file << "                             ^   ^   ^ " << std::endl;
-    file << "                            /|\\  |  /|\\ " << std::endl;
-    file << "                           / | \\ | / | \\ " << std::endl;
-    file << "                          /  |  \\|/  |  \\ " << std::endl;
-    file << "                         ^   ^   ^   ^   ^ " << std::endl;
-    file << "                        /|\\  |  / \\  |  /|\\ " << std::endl;
-    file << "                       / | \\ | /   \\ | / | \\ " << std::endl;
-    file << "                      /  |  \\|/     \\|/  |  \\ " << std::endl;
-    file << "                                 ||| " << std::endl;
-    file << "                                 ||| " << std::endl;
-    
+        file << "        ^        " << std::endl;
+        file << "       /|\\       " << std::endl;
+        file << "      /***\\      " << std::endl;
+        file << "     /*****\\     " << std::endl;
+        file << "    /*******\\    " << std::endl;
+        file << "       |||       " << std::endl;
+        file << "       |||       " << std::endl;
     file.close();
 }

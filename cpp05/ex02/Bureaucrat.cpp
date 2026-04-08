@@ -1,4 +1,5 @@
 #include "Bureaucrat.hpp"
+#include "AForm.hpp"
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other){
     if(this != &other){

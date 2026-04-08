@@ -6,7 +6,6 @@
 #include <stdexcept>
 #include <ostream>
 
-
 class Bureaucrat{
     private :
         const std::string name;
@@ -35,4 +34,3 @@ class Bureaucrat{
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &b);
 
 #endif
-

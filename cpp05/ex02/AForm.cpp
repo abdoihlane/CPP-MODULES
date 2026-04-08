@@ -60,3 +60,17 @@ const char* AForm::GradeTooLowException::what() const throw()
     return "Grade too low";
 }
 
+
+void AForm::checkExecution(Bureaucrat const &executor) const
+{
+    if (!this->GetIsSigned())
+        throw AForm::AFormNotSignedException();
+
+    if (executor.GetGrade() > this->GetGradeToExecute())
+        throw AForm::GradeTooLowException();
+}
+
+const char* AForm::AFormNotSignedException::what() const throw()
+{
+    return "AForm is not signed, cannot execute";
+}
