@@ -1,20 +1,19 @@
 #include "easyfind.hpp"
-#include "iostream"
-
-
 int main()
 {
-    std::vector<int> container;
-    container.push_back(1);
-    container.push_back(2);
-    container.push_back(3);
-    try{
-        easyfind(container,1);
-        std::cout << "value found" << std::endl;
-
+    std::vector<int> vec;
+    for (int i = 0; i < 10; ++i)
+        vec.push_back(i);
+    try
+    {
+        easyfind(vec, 5);
+        std::cout << "Value found!" << std::endl;
+        easyfind(vec, 15);
     }
-    catch(std::exception &e){
+    catch (const std::exception& e)
+    {
         std::cout << e.what() << std::endl;
     }
-    return 1;
+    return 0;
 }
+

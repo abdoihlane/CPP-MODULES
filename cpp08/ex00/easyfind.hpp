@@ -1,7 +1,7 @@
 #ifndef EASYFIND_HPP    
 #define EASYFIND_HPP    
 
-
+#include <iostream>
 #include <algorithm>
 #include <vector>
 #include <stdexcept> 
@@ -13,4 +13,5 @@ void easyfind(const T container, int value)
     if(found == container.end())
         throw std::runtime_error("value not found");
 }
+
 #endif
