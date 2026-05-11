@@ -4,12 +4,13 @@
 
 #include <algorithm>
 #include <vector>
+#include <stdexcept> 
 
 template <typename T>
 void easyfind(const T container, int value)
 {
-    std::vector<int>::const_iterator found = std::find(container.begin(),containter.end(),value);
+    std::vector<int>::const_iterator found = std::find(container.begin(),container.end(),value);
     if(found == container.end())
-        throw std::__throw_runtime_error("value not found");
+        throw std::runtime_error("value not found");
 }
 #endif
