@@ -56,4 +56,4 @@ This repository is intended for learning and practicing C++ concepts through sma
 
 ## Author
 
-Abdelghafour Ihlane
+ abdoihlane
