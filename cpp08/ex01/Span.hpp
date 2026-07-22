@@ -5,6 +5,16 @@
 #include <algorithm>
 #include <stdexcept>
 #include <limits>
+
+template <typename Iterator>
+void addRange(Iterator begin, Iterator end)
+{
+	while (begin != end)
+	{
+		addNumber(*begin);
+		begin++;
+	}
+}
 class Span
 {
     private:
